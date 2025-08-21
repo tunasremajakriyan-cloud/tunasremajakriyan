@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tunas Remaja Kriyan</title>
+  <title>Tunas Remaja Kriyan - Semangat Kemerdekaan</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header class="main-header">
+    <div class="flag-decoration"></div>
     <div class="logo-container">
       <img src="img/logo.png" alt="Logo TRK" class="logo">
       <div class="text-header">
-        <h1>Tunas Remaja Kriyan</h1>
-        <p>Bersatu, Berkarya, Membangun Desa</p>
+        <h1>🇮🇩 Tunas Remaja Kriyan 🇮🇩</h1>
+        <p>Semangat Kemerdekaan: Bersatu, Berkarya, Membangun Desa</p>
         <a href="https://instagram.com/tunasremajakriyan" target="_blank" class="ig-link">
           @tunasremajakriyan
         </a>
       </div>
     </div>
+    <div class="flag-decoration bottom"></div>
   </header>
 
   <!-- Navigasi -->
   <nav>
     <div class="nav-container">
-      <div class="logo-nav">🌿 TRK</div>
+      <div class="logo-nav">🇮🇩 TRK</div>
       <button class="hamburger" id="hamburger">☰</button>
       <ul id="nav-menu">
         <li><a href="#hero">Beranda</a></li>
@@ -40,14 +42,14 @@
   <section id="hero" class="hero reveal">
     <div class="hero-content">
       <h1>Selamat Datang di <span>Tunas Remaja Kriyan</span></h1>
-      <p>Bersatu, Berkarya, dan Membangun Desa dengan Semangat Pemuda</p>
+      <p>Mari kobarkan semangat <strong>17 Agustus</strong> untuk persatuan dan kemajuan desa!</p>
       <div class="hero-buttons">
         <a href="#kegiatan" class="btn-primary">Lihat Kegiatan</a>
         <a href="#kontak" class="btn-secondary">Gabung Sekarang</a>
       </div>
     </div>
     <div class="hero-image">
-      <img src="img/logo.png" alt="Logo TRK">
+      <img src="img/merah-putih.png" alt="Bendera Merah Putih">
     </div>
   </section>
 
@@ -55,31 +57,29 @@
   <section id="profil" class="reveal">
     <h2>Profil</h2>
     <p>
-      Tunas Remaja Kriyan adalah wadah berkumpulnya generasi muda Desa Kriyan
-      untuk meningkatkan persaudaraan, kreativitas, dan kepedulian sosial demi kemajuan masyarakat.
-      Kami hadir sebagai sarana bagi pemuda untuk menyalurkan bakat, ide, serta semangat dalam
-      membangun lingkungan yang lebih baik.
+      Tunas Remaja Kriyan hadir sebagai wadah generasi muda untuk mengisi kemerdekaan dengan karya nyata.
+      Kami menjunjung tinggi nilai persaudaraan, gotong royong, dan semangat perjuangan demi kemajuan desa.
     </p>
   </section>
 
   <!-- Kegiatan -->
   <section id="kegiatan" class="reveal">
-    <h2>Kegiatan</h2>
+    <h2>Kegiatan Kemerdekaan</h2>
     <div class="gallery">
       <a href="kegiatan/jalan-sehat.html" class="card">
-        <img src="img/logo.png" alt="Logo TRK">
+        <img src="img/jalan.png" alt="Jalan Sehat">
         <h3>Jalan Sehat</h3>
-        <p>Acara jalan sehat dan senam bersama warga untuk kebugaran dan kebersamaan.</p>
+        <p>Jalan sehat & senam bersama warga memperingati kemerdekaan RI.</p>
       </a>
       <a href="kegiatan/lomba-17.html" class="card">
-        <img src="img/logo.png" alt="Logo TRK">
+        <img src="img/lomba.png" alt="Lomba Agustusan">
         <h3>Lomba 17 Agustus</h3>
-        <p>Berbagai lomba seru untuk memeriahkan Hari Kemerdekaan Republik Indonesia.</p>
+        <p>Berbagai lomba tradisional untuk memeriahkan Hari Kemerdekaan.</p>
       </a>
       <a href="kegiatan/bakti-sosial.html" class="card">
-        <img src="img/logo.png" alt="Logo TRK">
+        <img src="img/sosial.png" alt="Bakti Sosial">
         <h3>Bakti Sosial</h3>
-        <p>Kegiatan sosial berbagi kebahagiaan dan membantu warga sekitar.</p>
+        <p>Kegiatan berbagi dengan warga sekitar dalam semangat gotong royong.</p>
       </a>
     </div>
   </section>
@@ -97,7 +97,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tunas Remaja Kriyan | Made with ❤️</p>
+    <p>&copy; 2025 Tunas Remaja Kriyan | Semangat Kemerdekaan 🇮🇩</p>
     <div class="socials">
       <a href="https://instagram.com/tunasremajakriyan" target="_blank">📷</a>
       <a href="mailto:tunasremajakriyan@gmail.com">✉️</a>
@@ -106,14 +106,12 @@
 
   <!-- Script -->
   <script>
-    // Hamburger menu
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
 
-    // Scroll reveal
     const reveals = document.querySelectorAll(".reveal");
     window.addEventListener("scroll", () => {
       for (let i = 0; i < reveals.length; i++) {
