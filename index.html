@@ -3,111 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ikatan Muda Mudi Tunas Remaja</title>
+  <title>Tunas Remaja Kriyan</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="container header-flex">
-      <div class="logo">
-        <img src="logo-tunas.png" alt="Logo Tunas Remaja">
-        <img src="garuda.png" alt="Garuda Indonesia">
-        <h1>Tunas Remaja</h1>
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo TRK" class="logo">
+      <div class="text-header">
+        <h1 class="fade-in">Tunas Remaja Kriyan</h1>
+        <p class="fade-in">Bersatu, Berkarya, Membangun Desa</p>
+        <a href="https://instagram.com/tunasremajakriyan" target="_blank" class="ig-link fade-in">
+          @tunasremajakriyan
+        </a>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#profil">Profil</a></li>
-          <li><a href="#kegiatan">Kegiatan</a></li>
-          <li><a href="#acara">Acara</a></li>
-          <li><a href="#kontak">Kontak</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Ikatan Muda Mudi<br>Tunas Remaja</h2>
-      <p>Menggandeng kebersamaan, kreativitas, dan persaudaraan.</p>
-      <a href="#profil" class="btn">Tentang Kami</a>
+  <!-- Navigasi -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo-nav">🌿 TRK</div>
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul id="nav-menu">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#kegiatan">Kegiatan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
   <!-- Profil -->
-  <section id="profil" class="section">
-    <div class="container">
-      <h2>Profil</h2>
-      <p>
-        <b>Tunas Remaja</b> adalah organisasi pemuda desa yang menjadi wadah pengembangan 
-        kreativitas, semangat kebersamaan, dan kepedulian sosial. Kami berkomitmen untuk 
-        membangun generasi muda yang aktif, peduli, dan berdaya guna bagi masyarakat.
-      </p>
-    </div>
+  <section id="profil" class="reveal">
+    <h2>Profil</h2>
+    <p>
+      Tunas Remaja Kriyan adalah wadah berkumpulnya generasi muda Desa Kriyan
+      untuk meningkatkan persaudaraan, kreativitas, dan kepedulian sosial
+      demi kemajuan masyarakat.
+    </p>
   </section>
 
-  <!-- Kegiatan Rutin -->
-  <section id="kegiatan" class="section alt">
-    <div class="container">
-      <h2>Kegiatan Rutin</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Olahraga</h3>
-          <p>Turnamen voli, futsal, dan senam sehat bersama.</p>
-        </div>
-        <div class="card">
-          <h3>Sosial</h3>
-          <p>Bakti sosial, kerja bakti, dan penggalangan dana.</p>
-        </div>
-        <div class="card">
-          <h3>Keagamaan</h3>
-          <p>Pengajian, peringatan hari besar, dan tadarus bersama.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Acara -->
-  <section id="acara" class="section">
-    <div class="container">
-      <h2>Acara Besar</h2>
-      <div class="events">
-        <div class="event-card">
-          <img src="https://source.unsplash.com/600x400/?game,community" alt="Lomba">
-          <h3>Lomba</h3>
-          <p>Aneka lomba olahraga dan kreativitas untuk memeriahkan acara desa.</p>
-        </div>
-        <div class="event-card">
-          <img src="https://source.unsplash.com/600x400/?walk,health" alt="Jalan Sehat">
-          <h3>Jalan Sehat</h3>
-          <p>Kegiatan jalan sehat seluruh warga dengan hadiah menarik.</p>
-        </div>
-        <div class="event-card">
-          <img src="https://source.unsplash.com/600x400/?charity,people" alt="Bakti Sosial">
-          <h3>Bakti Sosial</h3>
-          <p>Penggalangan dana, santunan, dan aksi sosial untuk warga.</p>
-        </div>
-      </div>
+  <!-- Kegiatan -->
+  <section id="kegiatan" class="reveal">
+    <h2>Kegiatan</h2>
+    <div class="gallery">
+      <a href="kegiatan/jalan-sehat.html" class="card">
+        <img src="img/logo.png" alt="Logo TRK">
+        <h3>Jalan Sehat</h3>
+        <p>Acara jalan sehat dan senam bersama warga.</p>
+      </a>
+      <a href="kegiatan/lomba-17.html" class="card">
+        <img src="img/logo.png" alt="Logo TRK">
+        <h3>Lomba 17 Agustus</h3>
+        <p>Berbagai lomba untuk memeriahkan HUT RI.</p>
+      </a>
+      <a href="kegiatan/bakti-sosial.html" class="card">
+        <img src="img/logo.png" alt="Logo TRK">
+        <h3>Bakti Sosial</h3>
+        <p>Kegiatan sosial membantu warga sekitar.</p>
+      </a>
     </div>
   </section>
 
   <!-- Kontak -->
-  <section id="kontak" class="section alt">
-    <div class="container">
-      <h2>Kontak</h2>
-      <p>Hubungi kami melalui:</p>
-      <ul class="kontak">
-        <li>Email: <a href="mailto:tunasremaja@example.com">tunasremaja@example.com</a></li>
-        <li>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></li>
-        <li>Alamat: Balai Desa Kriyan, Klaten</li>
-      </ul>
-    </div>
+  <section id="kontak" class="reveal">
+    <h2>Kontak</h2>
+    <p>Hubungi kami melalui:</p>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:tunasremajakriyan@gmail.com">tunasremajakriyan@gmail.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/tunasremajakriyan" target="_blank">@tunasremajakriyan</a></li>
+      <li>Alamat: Dk.Kriyan, Babadan, Karangdowo, Klaten</li>
+    </ul>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Ikatan Muda Mudi Tunas Remaja</p>
+    <p>&copy; 2025 Tunas Remaja Kriyan | Made with ❤️</p>
+    <div class="socials">
+      <a href="https://instagram.com/tunasremajakriyan" target="_blank">📷</a>
+      <a href="mailto:tunasremajakriyan@gmail.com">✉️</a>
+    </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", function() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        if (revealTop < windowHeight - 100) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
