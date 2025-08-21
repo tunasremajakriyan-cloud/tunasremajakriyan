@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tunas Remaja Kriyan — Bersatu, Berkarya, Membangun Desa</title>
   <meta name="description" content="Tunas Remaja Kriyan (TRK) adalah komunitas pemuda Desa Kriyan yang bersatu, berkarya, dan membangun desa melalui kegiatan sosial, olahraga, dan kreativitas.">
-  
-  <!-- Open Graph / Twitter Card -->
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Tunas Remaja Kriyan">
   <meta property="og:description" content="Bersatu, Berkarya, dan Membangun Desa dengan Semangat Pemuda">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tunasremajakriyan-cloud.github.io/tunasremajakriyan/">
-  <meta property="og:image" content="img/jalan1.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="img/logo.png">
+  <meta name="twitter:card" content="summary">
 
   <!-- Favicon -->
   <link rel="icon" href="img/logo.png">
@@ -30,7 +30,7 @@
   <!-- Header -->
   <header class="main-header">
     <div class="logo-container">
-      <img src="img/logo.png" alt="Logo Tunas Remaja Kriyan" class="logo" width="80" height="80">
+      <img src="img/logo.png" alt="Logo Tunas Remaja Kriyan" class="logo" width="72" height="72">
       <div class="text-header">
         <h1>Tunas Remaja Kriyan</h1>
         <p>Bersatu, Berkarya, Membangun Desa</p>
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="img/jalan1.jpg" alt="Pemuda TRK dalam kegiatan jalan sehat" width="400" height="300" loading="lazy">
+        <img src="img/logo.png" alt="Logo Tunas Remaja Kriyan" width="150" height="150" loading="lazy">
       </div>
     </section>
 
@@ -87,17 +87,17 @@
       <h2>Kegiatan</h2>
       <div class="gallery">
         <a href="kegiatan/jalan-sehat.html" class="card">
-          <img src="img/jalan2.jpg" alt="Peserta jalan sehat TRK" width="320" height="200" loading="lazy">
+          <img src="img/logo.png" alt="Ikon Jalan Sehat TRK" width="120" height="120" loading="lazy">
           <h3>Jalan Sehat</h3>
           <p>Acara jalan sehat dan senam bersama warga untuk kebugaran dan kebersamaan.</p>
         </a>
         <a href="kegiatan/lomba-17.html" class="card">
-          <img src="img/jalan3.jpg" alt="Lomba 17 Agustus TRK" width="320" height="200" loading="lazy">
+          <img src="img/logo.png" alt="Ikon Lomba 17 Agustus TRK" width="120" height="120" loading="lazy">
           <h3>Lomba 17 Agustus</h3>
           <p>Berbagai lomba seru untuk memeriahkan Hari Kemerdekaan Republik Indonesia.</p>
         </a>
         <a href="kegiatan/bakti-sosial.html" class="card">
-          <img src="img/logo.png" alt="Ikon bakti sosial TRK" width="120" height="120" loading="lazy">
+          <img src="img/logo.png" alt="Ikon Bakti Sosial TRK" width="120" height="120" loading="lazy">
           <h3>Bakti Sosial</h3>
           <p>Kegiatan sosial berbagi kebahagiaan dan membantu warga sekitar.</p>
         </a>
@@ -138,7 +138,6 @@
       hamburger.setAttribute('aria-expanded', String(!expanded));
       navMenu.classList.toggle('active');
     });
-    // Tutup menu setelah klik link
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -146,7 +145,7 @@
       });
     });
 
-    // Scroll reveal (respect reduced motion)
+    // Scroll reveal
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!prefersReduced) {
       const reveals = document.querySelectorAll(".reveal");
