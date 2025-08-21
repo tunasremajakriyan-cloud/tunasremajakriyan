@@ -107,5 +107,34 @@
       }
     });
   </script>
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll(".reveal");
+
+  window.addEventListener("scroll", () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      if (revealTop < windowHeight - 100) {
+        reveals[i].classList.add("active");
+      }
+    }
+  });
+</script>
+<section id="profil" class="reveal">
+  <h2>Profil</h2>
+  <p> ... </p>
+</section>
+
+<section id="kegiatan" class="reveal">
+  <h2>Kegiatan</h2>
+  ...
+</section>
+
+<section id="kontak" class="reveal">
+  <h2>Kontak</h2>
+  ...
+</section>
 </body>
 </html>
+
