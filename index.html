@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tunas Remaja Kriyan</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,6 +16,7 @@
       <button class="hamburger" onclick="toggleMenu()">☰</button>
       <nav>
         <ul id="nav-menu">
+          <li><a href="#hero">Beranda</a></li>
           <li><a href="#profil">Profil</a></li>
           <li><a href="#kegiatan">Kegiatan</a></li>
           <li><a href="#kontak">Kontak</a></li>
@@ -25,51 +26,55 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section id="hero" class="hero">
+    <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Selamat Datang di <br><span>Tunas Remaja Kriyan</span></h1>
+      <h1><span>Tunas Remaja Kriyan</span></h1>
       <p>Bersatu, Berkarya, dan Membangun Desa dengan Semangat Pemuda</p>
       <div class="hero-buttons">
-        <a href="#kegiatan" class="btn-primary">Lihat Kegiatan</a>
-        <a href="#kontak" class="btn-secondary">Gabung Sekarang</a>
+        <a href="#kegiatan" class="btn-primary">✨ Lihat Kegiatan</a>
+        <a href="#kontak" class="btn-secondary">🤝 Gabung Sekarang</a>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="img/logo.png" alt="Logo TRK">
     </div>
   </section>
 
   <!-- Profil -->
   <section id="profil" class="reveal">
     <h2>Profil</h2>
-    <p>Tunas Remaja Kriyan adalah wadah berkumpulnya generasi muda Desa Kriyan untuk meningkatkan persaudaraan, kreativitas, dan kepedulian sosial demi kemajuan masyarakat.</p>
+    <p>Tunas Remaja Kriyan adalah wadah generasi muda Desa Kriyan yang berkomitmen untuk memajukan desa melalui kegiatan sosial, budaya, dan olahraga dengan semangat kebersamaan.</p>
   </section>
 
   <!-- Kegiatan -->
   <section id="kegiatan" class="reveal">
-    <h2>Kegiatan</h2>
+    <h2>Kegiatan Kami</h2>
     <div class="gallery">
-      <div class="card">
-        <img src="img/kegiatan1.jpg" alt="Jalan Sehat" onclick="openLightbox(this.src, 'Jalan Sehat - Senam & Jalan Sehat bersama warga')">
-        <h3>Jalan Sehat</h3>
-        <p>Acara jalan sehat dan senam bersama warga untuk kebugaran dan kebersamaan.</p>
+      <div class="card" onclick="openLightbox(0)">
+        <img src="img/kegiatan1.jpg" alt="Jalan Sehat">
+        <div class="card-body">
+          <h3>Jalan Sehat</h3>
+          <p>Senam & jalan sehat bersama warga untuk menjaga kebugaran dan persatuan.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="img/kegiatan2.jpg" alt="Lomba 17 Agustus" onclick="openLightbox(this.src, 'Lomba 17 Agustus - Semangat Kemerdekaan')">
-        <h3>Lomba 17 Agustus</h3>
-        <p>Berbagai lomba seru untuk memeriahkan Hari Kemerdekaan Republik Indonesia.</p>
+      <div class="card" onclick="openLightbox(1)">
+        <img src="img/kegiatan2.jpg" alt="Lomba 17 Agustus">
+        <div class="card-body">
+          <h3>Lomba 17 Agustus</h3>
+          <p>Perlombaan seru penuh keceriaan memeriahkan Hari Kemerdekaan.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="img/kegiatan3.jpg" alt="Bakti Sosial" onclick="openLightbox(this.src, 'Bakti Sosial - Kepedulian untuk Sesama')">
-        <h3>Bakti Sosial</h3>
-        <p>Kegiatan sosial berbagi kebahagiaan dan membantu warga sekitar.</p>
+      <div class="card" onclick="openLightbox(2)">
+        <img src="img/kegiatan3.jpg" alt="Bakti Sosial">
+        <div class="card-body">
+          <h3>Bakti Sosial</h3>
+          <p>Kegiatan sosial berbagi kebahagiaan dan membantu sesama warga.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Kontak -->
   <section id="kontak" class="reveal">
-    <h2>Kontak</h2>
+    <h2>Kontak Kami</h2>
     <ul class="contact-list">
       <li><a href="https://instagram.com/tunasremajakriyan" target="_blank">📸 Instagram: @tunasremajakriyan</a></li>
       <li><a href="mailto:info@tunasremaja.com">📧 Email: info@tunasremaja.com</a></li>
@@ -78,14 +83,16 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Tunas Remaja Kriyan | Made with ❤️</p>
+    <p>© 2025 Tunas Remaja Kriyan | Premium Design ✨</p>
   </footer>
 
-  <!-- Lightbox Modal -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
     <span class="close" onclick="closeLightbox()">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
     <div id="caption"></div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
   </div>
 
   <!-- Script -->
@@ -96,25 +103,33 @@
     }
 
     // Lightbox
-    function openLightbox(src, caption) {
+    let currentIndex = 0;
+    const images = [
+      {src: "img/kegiatan1.jpg", caption: "Jalan Sehat - Senam & Jalan Sehat bersama warga"},
+      {src: "img/kegiatan2.jpg", caption: "Lomba 17 Agustus - Perlombaan seru"},
+      {src: "img/kegiatan3.jpg", caption: "Bakti Sosial - Kepedulian untuk sesama"}
+    ];
+    function openLightbox(index) {
+      currentIndex = index;
       document.getElementById("lightbox").style.display = "block";
-      document.getElementById("lightbox-img").src = src;
-      document.getElementById("caption").innerText = caption;
+      document.getElementById("lightbox-img").src = images[index].src;
+      document.getElementById("caption").innerText = images[index].caption;
     }
     function closeLightbox() {
       document.getElementById("lightbox").style.display = "none";
+    }
+    function changeSlide(step) {
+      currentIndex = (currentIndex + step + images.length) % images.length;
+      openLightbox(currentIndex);
     }
 
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     window.addEventListener('scroll', () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        if (revealTop < windowHeight - 100) {
-          reveals[i].classList.add('active');
-        }
-      }
+      reveals.forEach(r => {
+        const revealTop = r.getBoundingClientRect().top;
+        if (revealTop < window.innerHeight - 100) r.classList.add('active');
+      });
     });
   </script>
 </body>
