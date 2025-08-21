@@ -35,10 +35,8 @@ body {
   font-weight: 700; color: var(--brand);
   text-decoration: none;
 }
-.brand-logo { width: 32px; }
-#nav-menu {
-  display: flex; gap: 1rem;
-}
+.brand-logo { width: 32px; height: auto; }
+#nav-menu { display: flex; gap: 1rem; }
 #nav-menu a {
   text-decoration: none;
   color: var(--text);
@@ -48,14 +46,11 @@ body {
 .hamburger { display: none; background: none; border: 0; font-size: 1.5rem; }
 
 /* Hero */
-.hero {
-  padding: 4rem 0;
-  text-align: center;
-}
+.hero { padding: 4rem 0; text-align: center; }
 .hero h1 { font-size: 2rem; margin-bottom: .5rem; }
 .hero p { color: #555; margin-bottom: 1.5rem; }
-.hero-logo img { margin: 1rem auto; }
-.buttons { display: flex; gap: 1rem; justify-content: center; }
+.hero-logo img { max-width: 160px; display: block; margin: 1.5rem auto; }
+.buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; }
 .btn {
   padding: .6rem 1.2rem;
   border-radius: .5rem;
@@ -63,11 +58,10 @@ body {
   font-weight: 600;
   border: 1px solid var(--brand);
   color: var(--brand);
+  transition: background .2s, color .2s;
 }
-.btn.primary {
-  background: var(--brand);
-  color: white;
-}
+.btn.primary { background: var(--brand); color: white; }
+.btn:hover { background: var(--brand); color: white; }
 
 /* Sections */
 .section { padding: 3rem 0; text-align: center; }
