@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kegiatan - Jalan Sehat | TRK</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="merdeka-theme">
+  <!-- Header pakai versi baru -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <img src="../img/logo.png" alt="Logo TRK" class="brand-logo">
+        <div class="brand-text">
+          <h1>TUNAS REMAJA KRIYAN</h1>
+          <p>Bersatu, Berkarya, Membangun Desa</p>
+        </div>
+      </div>
+      <nav id="nav-menu" class="nav-links">
+        <a href="../index.html#hero">Beranda</a>
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#kegiatan">Kegiatan</a>
+        <a href="../index.html#kontak">Kontak</a>
+      </nav>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+    <div class="gold-strip"></div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h2>Jalan Sehat</h2>
+      <p>
+        Acara jalan sehat dan senam bersama warga sebagai bagian dari perayaan HUT RI ke-80.
+        Kegiatan ini bertujuan untuk menjaga kebugaran tubuh sekaligus mempererat kebersamaan antarwarga.
+      </p>
+      <div class="hero-logo">
+        <img src="../desain/logo-80.png" alt="Logo 80 Tahun Indonesia">
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Tunas Remaja Kriyan | Dirgahayu RI ke-80 🇮🇩</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
