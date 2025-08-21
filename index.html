@@ -9,34 +9,34 @@
 </head>
 <body>
   <!-- Header -->
-<header class="main-header">
-  <div class="logo-container">
-    <img src="img/logo.png" alt="Logo TRK" class="logo">
-    <div class="text-header">
-      <h1>Tunas Remaja Kriyan</h1>
-      <p>Bersatu, Berkarya, Membangun Desa</p>
-      <a href="https://instagram.com/tunasremajakriyan" target="_blank" class="ig-link">
-        @tunasremajakriyan
-      </a>
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo TRK" class="logo">
+      <div class="text-header">
+        <h1 class="fade-in">Tunas Remaja Kriyan</h1>
+        <p class="fade-in">Bersatu, Berkarya, Membangun Desa</p>
+        <a href="https://instagram.com/tunasremajakriyan" target="_blank" class="ig-link fade-in">
+          @tunasremajakriyan
+        </a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Navigasi -->
-<nav>
-  <div class="nav-container">
-    <div class="logo-nav">🌿 TRK</div>
-    <button class="hamburger" id="hamburger">☰</button>
-    <ul id="nav-menu">
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#kegiatan">Kegiatan</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- Navigasi -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo-nav">🌿 TRK</div>
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul id="nav-menu">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#kegiatan">Kegiatan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Profil -->
-  <section id="profil">
+  <section id="profil" class="reveal">
     <h2>Profil</h2>
     <p>
       Tunas Remaja Kriyan adalah wadah berkumpulnya generasi muda Desa Kriyan
@@ -46,7 +46,7 @@
   </section>
 
   <!-- Kegiatan -->
-  <section id="kegiatan">
+  <section id="kegiatan" class="reveal">
     <h2>Kegiatan</h2>
     <div class="gallery">
       <a href="kegiatan/jalan-sehat.html" class="card">
@@ -68,7 +68,7 @@
   </section>
 
   <!-- Kontak -->
-  <section id="kontak">
+  <section id="kontak" class="reveal">
     <h2>Kontak</h2>
     <p>Hubungi kami melalui:</p>
     <ul class="contact-list">
@@ -81,16 +81,31 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Tunas Remaja Kriyan | Made with ❤️</p>
+    <div class="socials">
+      <a href="https://instagram.com/tunasremajakriyan" target="_blank">📷</a>
+      <a href="mailto:tunasremajakriyan@gmail.com">✉️</a>
+    </div>
   </footer>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-</script>
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", function() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        if (revealTop < windowHeight - 100) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
-
-
