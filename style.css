@@ -98,3 +98,81 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); b
   #nav-menu.active { display: flex; }
   .hamburger { display: block; }
 }
+/* Header Merah Putih Premium */
+.navbar {
+  background: linear-gradient(90deg, #b91c1c, #991b1b);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 0;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.brand-logo { width: 48px; }
+.brand-text h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+.brand-text p {
+  font-size: .8rem;
+  margin: 0;
+  color: #f3f4f6;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: gold;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: 0;
+  color: white;
+}
+.gold-strip {
+  height: 4px;
+  background: gold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #991b1b;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+  }
+  .nav-links.active { display: flex; }
+  .hamburger { display: block; }
+}
+
