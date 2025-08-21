@@ -22,14 +22,18 @@
   </div>
 </header>
 
-  <!-- Navigasi -->
-  <nav>
-    <ul>
+<!-- Navigasi -->
+<nav>
+  <div class="nav-container">
+    <div class="logo-nav">🌿 TRK</div>
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul id="nav-menu">
       <li><a href="#profil">Profil</a></li>
       <li><a href="#kegiatan">Kegiatan</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
   <!-- Profil -->
   <section id="profil">
@@ -78,6 +82,15 @@
   <footer>
     <p>&copy; 2025 Tunas Remaja Kriyan | Made with ❤️</p>
   </footer>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
+
 
