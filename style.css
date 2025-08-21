@@ -352,6 +352,55 @@ footer .socials a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+/* Section Kegiatan */
+#kegiatan {
+  background: #f9fafb;
+  padding: 4rem 1.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Foto kegiatan */
+.card img {
+  width: 100%;
+  height: 200px;       /* bikin seragam */
+  object-fit: cover;   /* biar nggak gepeng */
+  display: block;
+}
+
+/* Konten card */
+.card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+  color: #065f46;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0 1rem 1.5rem;
+  line-height: 1.5;
+}
+
 
 
 
