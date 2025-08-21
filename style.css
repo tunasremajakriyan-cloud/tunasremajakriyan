@@ -7,50 +7,28 @@ body, h1, h2, h3, p, ul {
 
 body {
   line-height: 1.6;
-  background: #fff;
+  background: #fafafa;
   color: #333;
 }
 
-/* Header Merah Putih */
+/* Header */
 .main-header {
-  background: linear-gradient(135deg, #d90429, #ef233c);
+  background: linear-gradient(135deg, #8b0000, #b22222);
   color: white;
-  padding: 4rem 1rem 3rem;
+  padding: 3.5rem 1rem 2.5rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
-.flag-decoration {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: repeating-linear-gradient(
-    90deg,
-    red 0 40px,
-    white 40px 80px
-  );
-}
-
-.flag-decoration.bottom {
-  bottom: 0;
-  top: auto;
-}
-
-/* Logo */
 .logo {
-  max-width: 100px;
+  max-width: 90px;
   border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
 }
 
-/* IG Link */
 .ig-link {
   margin-top: 0.5rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 .ig-link:hover {
@@ -58,13 +36,13 @@ body {
   color: #ffe8e8;
 }
 
-/* Navigasi Merah */
+/* Navigasi elegan */
 nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #d90429;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: #8b0000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .nav-container {
@@ -79,12 +57,12 @@ nav {
 .logo-nav {
   font-weight: 700;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .hamburger {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background: none;
   border: none;
   color: white;
@@ -95,17 +73,17 @@ nav ul {
   list-style: none;
   display: flex;
 }
-nav li { margin: 0.5rem; }
+nav li { margin: 0.4rem; }
 nav a {
   color: white;
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+  padding: 0.5rem 1.1rem;
+  border-radius: 18px;
   transition: 0.3s;
 }
 nav a:hover {
-  background: white;
-  color: #d90429;
+  background: #fff;
+  color: #8b0000;
 }
 
 /* Section */
@@ -117,21 +95,19 @@ section {
 }
 
 h2 {
-  margin-bottom: 1.5rem;
-  color: #d90429;
-  font-size: 2rem;
+  margin-bottom: 1.3rem;
+  color: #8b0000;
+  font-size: 1.8rem;
   font-weight: 700;
-  position: relative;
 }
 
 h2::after {
   content: "";
   display: block;
-  width: 70px;
-  height: 4px;
-  margin: 0.5rem auto 0;
-  background: #ef233c;
-  border-radius: 2px;
+  width: 60px;
+  height: 3px;
+  margin: 0.4rem auto 0;
+  background: #b22222;
 }
 
 /* Gallery */
@@ -142,40 +118,40 @@ h2::after {
 }
 .card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   text-decoration: none;
   color: inherit;
   transition: 0.3s;
 }
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 .card img {
-  max-width: 90px;
-  margin-bottom: 1rem;
+  max-width: 80px;
+  margin-bottom: 0.8rem;
 }
 
 /* Kontak */
 .contact-list { list-style: none; padding: 0; }
-.contact-list li { margin: 0.8rem 0; font-size: 1.05rem; }
-.contact-list a { color: #d90429; font-weight: 600; text-decoration: none; }
+.contact-list li { margin: 0.7rem 0; font-size: 1.05rem; }
+.contact-list a { color: #8b0000; font-weight: 600; text-decoration: none; }
 .contact-list a:hover { text-decoration: underline; }
 
 /* Footer */
 footer {
   background: #111;
-  color: #eee;
+  color: #ccc;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.8rem 1rem;
   margin-top: 3rem;
 }
 footer .socials a {
   margin: 0 0.5rem;
   font-size: 1.2rem;
-  color: #ef233c;
+  color: #b22222;
   text-decoration: none;
 }
 footer .socials a:hover { color: #ff4d6d; }
