@@ -1,165 +1,137 @@
 /* Reset */
-body, h1, h2, h3, p, ul {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
+/* Body */
 body {
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: #fafafa;
+  background: #f9f9f9;
   color: #333;
 }
 
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
 /* Header */
-.main-header {
-  background: linear-gradient(135deg, #8b0000, #b22222);
-  color: white;
-  padding: 3.5rem 1rem 2.5rem;
-  text-align: center;
-}
-
-.logo {
-  max-width: 90px;
-  border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-}
-
-.ig-link {
-  margin-top: 0.5rem;
+header {
+  background: #2c3e50;
   color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-}
-.ig-link:hover {
-  text-decoration: underline;
-  color: #ffe8e8;
-}
-
-/* Navigasi elegan */
-nav {
+  padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: #8b0000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
 }
 
-.nav-container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0.5rem 1rem;
 }
 
-.logo-nav {
-  font-weight: 700;
-  color: white;
-  font-size: 1.2rem;
+header h1 {
+  font-size: 1.5rem;
 }
 
-.hamburger {
-  display: none;
-  font-size: 1.6rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
 }
-nav li { margin: 0.4rem; }
-nav a {
-  color: white;
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1.1rem;
-  border-radius: 18px;
   transition: 0.3s;
 }
-nav a:hover {
-  background: #fff;
-  color: #8b0000;
+
+header nav ul li a:hover {
+  color: #f39c12;
 }
 
-/* Section */
-section {
-  padding: 3rem 1.5rem;
-  max-width: 1000px;
-  margin: auto;
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
 }
 
-h2 {
-  margin-bottom: 1.3rem;
-  color: #8b0000;
-  font-size: 1.8rem;
-  font-weight: 700;
+.section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  margin: 0.4rem auto 0;
-  background: #b22222;
+.section.alt {
+  background: #ecf0f1;
 }
 
-/* Gallery */
-.gallery {
+/* Cards */
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
+
 .card {
   background: #fff;
-  border-radius: 15px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  text-decoration: none;
-  color: inherit;
-  transition: 0.3s;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
+
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
 }
-.card img {
-  max-width: 80px;
-  margin-bottom: 0.8rem;
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #f39c12;
 }
 
 /* Kontak */
-.contact-list { list-style: none; padding: 0; }
-.contact-list li { margin: 0.7rem 0; font-size: 1.05rem; }
-.contact-list a { color: #8b0000; font-weight: 600; text-decoration: none; }
-.contact-list a:hover { text-decoration: underline; }
+.kontak {
+  list-style: none;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.kontak li {
+  margin: 8px 0;
+}
+
+.kontak a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.kontak a:hover {
+  color: #f39c12;
+}
 
 /* Footer */
 footer {
-  background: #111;
-  color: #ccc;
+  background: #2c3e50;
+  color: #fff;
   text-align: center;
-  padding: 1.8rem 1rem;
-  margin-top: 3rem;
-}
-footer .socials a {
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
-  color: #b22222;
-  text-decoration: none;
-}
-footer .socials a:hover { color: #ff4d6d; }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hamburger { display: block; }
-  nav ul { display: none; flex-direction: column; width: 100%; }
-  nav ul.active { display: flex; }
-  nav a { text-align: center; }
+  padding: 15px;
+  margin-top: 30px;
 }
