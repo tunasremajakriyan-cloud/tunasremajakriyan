@@ -1,327 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karang Taruna Tunas Remaja — DK Kriyan, Babadan, Karangdowo, Klaten</title>
-  <meta name="description" content="Profil, kegiatan, dan kontak Karang Taruna Tunas Remaja DK Kriyan, Babadan, Karangdowo, Klaten." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23d21f3c'/%3E%3Ctext x='50' y='58' font-size='42' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'%3ETR%3C/text%3E%3C/svg%3E" />
-  <style>
-    :root{
-      --bg: #0b0b0f;
-      --card: #12131a;
-      --muted: #a7adbb;
-      --text: #e9ecf1;
-      --brand: #d21f3c; /* aksen merah elegan */
-      --brand-2: #ffffff; /* putih */
-      --ring: rgba(210,31,60,.35);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 20px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0a0a0d, #0e0f14 45%, #0b0b0f);color:var(--text);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(1200px,92%);margin-inline:auto}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(11,11,15,.75);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#a80d2b);display:grid;place-items:center;color:white;font-weight:800;letter-spacing:1px;box-shadow:var(--shadow)}
-    .brand h1{font-size:18px;line-height:1.1;margin:0}
-    .brand small{color:var(--muted);display:block;opacity:.9}
-    .menu{display:flex;gap:14px;align-items:center}
-    .menu a{padding:10px 14px;border-radius:14px;color:var(--muted)}
-    .menu a:hover{color:var(--text);background:rgba(255,255,255,.06)}
-    .cta{background:linear-gradient(135deg,var(--brand),#b01531);color:white;border:none;padding:10px 16px;border-radius:14px;box-shadow:var(--shadow)}
-
-    /* Mobile */
-    .burger{display:none}
-    @media (max-width:800px){
-      .menu{display:none}
-      .burger{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06)}
-    }
-
-    /* Hero */
-    .hero{position:relative;overflow:hidden}
-    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;padding:64px 0}
-    .badge{display:inline-flex;gap:10px;align-items:center;background:rgba(210,31,60,.12);border:1px solid var(--ring);color:#fff;border-radius:999px;padding:8px 12px;font-size:12px}
-    .title{font-size:40px;line-height:1.1;margin:14px 0 8px}
-    .subtitle{color:var(--muted);font-size:16px;max-width:60ch}
-    .hero-card{background:radial-gradient(1200px 400px at 10% -10%,rgba(210,31,60,.12),transparent 70%), var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-    .kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:16px;border-radius:16px;text-align:center}
-    .kpi b{font-size:22px}
-    @media (max-width:900px){
-      .hero .wrap{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width:600px){
-      .grid-3{grid-template-columns:1fr}
-      .title{font-size:32px}
-    }
-
-    /* Sections */
-    section{padding:52px 0}
-    .sec-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-    .sec-title h2{margin:0;font-size:26px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-
-    /* Profile */
-    .profile{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
-    .list{display:grid;gap:12px;margin-top:10px}
-    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
-    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;color:var(--muted)}
-    @media (max-width:900px){.profile{grid-template-columns:1fr}}
-
-    /* Kegiatan */
-    .kegiatan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    @media (max-width:900px){.kegiatan-grid{grid-template-columns:1fr}}
-    .event{display:grid;gap:12px}
-    .event h3{margin:0}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .gallery .ph{aspect-ratio:1.3/1;background:linear-gradient(135deg,rgba(210,31,60,.25),rgba(255,255,255,.08));border:1px dashed rgba(255,255,255,.2);border-radius:12px;display:grid;place-items:center;color:var(--muted);font-size:12px}
-
-    .btn-row{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;display:inline-flex;gap:8px;align-items:center}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),#b01531);border:none;color:#fff}
-
-    /* Kontak */
-    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
-    @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
-    .field{display:grid;gap:6px}
-    input, textarea{background:rgba(255,255,255,.05);color:var(--text);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px}
-
-    /* Footer */
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:22px 0;color:var(--muted)}
-
-    /* Ribbon motif merah-putih halus */
-    .ribbon{position:absolute;inset:auto -40% -60px -40%;height:180px;background:linear-gradient(90deg,rgba(210,31,60,.9), rgba(210,31,60,.6), rgba(255,255,255,.8));filter:blur(60px);opacity:.3;pointer-events:none}
-  </style>
-  <script>
-    // toggle mobile menu
-    function toggleMenu(){
-      const m = document.querySelector('.menu');
-      if(!m) return; m.style.display = (m.style.display==='flex'?'none':'flex');
-    }
-  </script>
-  <!-- Schema.org Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Karang Taruna Tunas Remaja",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "DK Kriyan, Babadan, Karangdowo",
-      "addressLocality": "Klaten",
-      "addressRegion": "Jawa Tengah",
-      "addressCountry": "ID"
-    },
-    "email": "tunasremaja.kriyan@gmail.com",
-    "sameAs": [
-      "https://instagram.com/tunasremaja.kriyan"
-    ]
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tunas Remaja Kriyan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">TR</div>
-        <div>
-          <h1>Tunas Remaja</h1>
-          <small>DK Kriyan · Babadan · Karangdowo · Klaten</small>
-        </div>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo TRK" class="logo">
+      <div class="text-header">
+        <h1>Tunas Remaja Kriyan</h1>
+        <p>Bersatu, Berkarya, Membangun Desa</p>
+        <a href="https://instagram.com/tunasremajakriyan" target="_blank" class="ig-link">
+          @tunasremaja.kriyan
+        </a>
       </div>
-      <nav class="menu">
-        <a href="#beranda">Beranda</a>
-        <a href="#profil">Profil</a>
-        <a href="#kegiatan">Kegiatan</a>
-        <a href="#kontak">Kontak</a>
-        <a class="cta" href="#kegiatan">Lihat Agenda</a>
-      </nav>
-      <button class="burger" onclick="toggleMenu()">☰ Menu</button>
     </div>
   </header>
 
-  <main id="beranda" class="hero">
-    <div class="ribbon"></div>
-    <div class="container wrap">
-      <div class="hero-card">
-        <span class="badge">Karang Taruna · Remaja Kreatif & Peduli Sosial</span>
-        <h2 class="title">Tunas Remaja — Wadah Berkarya & Berdaya</h2>
-        <p class="subtitle">Kami adalah komunitas pemuda di DK Kriyan, Babadan, Karangdowo, Klaten yang aktif dalam kegiatan sosial, keagamaan, olahraga, dan kepemudaan. Bergabung untuk bergerak bersama!</p>
-        <div class="grid-3">
-          <div class="kpi"><b>4+</b><br/><small>Agenda Tahunan</small></div>
-          <div class="kpi"><b>100+</b><br/><small>Partisipan Kegiatan</small></div>
-          <div class="kpi"><b>1</b><br/><small>Tujuan: Berdaya</small></div>
-        </div>
-        <div class="btn-row" style="margin-top:16px">
-          <a class="btn primary" href="#kegiatan">📅 Lihat Kegiatan</a>
-          <a class="btn" href="#kontak">✉️ Hubungi Kami</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Sekilas Agenda</h3>
-        <ul class="list">
-          <li>🔹 Lomba 17-an: lomba tradisional & kebersamaan warga.</li>
-          <li>🔹 Jalan Sehat 2024 & 2025: sehat, hadiahnya seru!</li>
-          <li>🔹 Nuzulul Quran 2025: kajian & santunan.</li>
-        </ul>
-        <div class="pill" style="margin-top:12px">📌 Lokasi: DK Kriyan, Babadan, Karangdowo, Klaten</div>
+  <!-- Navigasi -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo-nav">🌿 TRK</div>
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul id="nav-menu">
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#kegiatan">Kegiatan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero reveal">
+    <div class="hero-content">
+      <h1>Selamat Datang di <span>Tunas Remaja Kriyan</span></h1>
+      <p>Bersatu, Berkarya, dan Membangun Desa dengan Semangat Pemuda</p>
+      <div class="hero-buttons">
+        <a href="#kegiatan" class="btn-primary">Lihat Kegiatan</a>
+        <a href="#kontak" class="btn-secondary">Gabung Sekarang</a>
       </div>
     </div>
-  </main>
-
-  <section id="profil">
-    <div class="container">
-      <div class="sec-title">
-        <h2>Profil</h2>
-        <span class="pill">Sejarah Singkat & Visi</span>
-      </div>
-      <div class="profile">
-        <div class="card">
-          <p><b>Tunas Remaja</b> adalah Karang Taruna di DK Kriyan yang fokus pada pemberdayaan generasi muda melalui kegiatan sosial, keagamaan, olahraga, dan kreativitas. Kami menjunjung nilai <i>gotong royong</i>, <i>solidaritas</i>, dan <i>kepemimpinan</i>.</p>
-          <ul class="list">
-            <li>✅ <b>Visi:</b> Mewujudkan pemuda yang produktif, berakhlak, dan bermanfaat bagi lingkungan.</li>
-            <li>🎯 <b>Misi:</b> Menyelenggarakan kegiatan yang sehat, edukatif, dan memperkuat silaturahmi warga.</li>
-            <li>🤝 <b>Nilai:</b> Kebersamaan, Tanggung Jawab, Kreatif, Peduli.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">Program Utama</h3>
-          <div class="list">
-            <div class="pill">Olahraga & Kesehatan</div>
-            <div class="pill">Keagamaan & Sosial</div>
-            <div class="pill">Seni & Budaya</div>
-            <div class="pill">Lingkungan & Kebersihan</div>
-          </div>
-          <p style="color:var(--muted);margin-top:12px">Semua program terbuka untuk partisipasi warga. Hubungi kami untuk ikut menjadi panitia atau relawan.</p>
-        </div>
-      </div>
+    <div class="hero-image">
+      <img src="img/logo.png" alt="Logo TRK">
     </div>
   </section>
 
-  <section id="kegiatan">
-    <div class="container">
-      <div class="sec-title">
-        <h2>Kegiatan</h2>
-        <a class="btn" href="#kontak">Ajukan Kegiatan +</a>
-      </div>
-      <div class="kegiatan-grid">
-        <!-- LOMBA -->
-        <article class="card event">
-          <div>
-            <h3>🏆 Lomba</h3>
-            <p>Lomba 17 Agustus & kegiatan antarwarga: balap karung, tarik tambang, memasukkan paku, estafet air, dan lainnya. Suasana meriah dan penuh kebersamaan.</p>
-          </div>
-          <div class="gallery">
-            <div class="ph">Foto 1</div>
-            <div class="ph">Foto 2</div>
-            <div class="ph">Foto 3</div>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="#">Album Foto</a>
-            <a class="btn" download href="assets/lomba-2025.zip">Unduh Foto (.zip)</a>
-          </div>
-        </article>
+  <!-- Profil -->
+  <section id="profil" class="reveal">
+    <h2>Profil</h2>
+    <p>
+      Tunas Remaja Kriyan adalah wadah berkumpulnya generasi muda Desa Kriyan
+      untuk meningkatkan persaudaraan, kreativitas, dan kepedulian sosial demi kemajuan masyarakat.
+      Kami hadir sebagai sarana bagi pemuda untuk menyalurkan bakat, ide, serta semangat dalam
+      membangun lingkungan yang lebih baik.
+    </p>
+  </section>
 
-        <!-- JALAN SEHAT 2024 -->
-        <article class="card event">
-          <div>
-            <h3>🚶‍♂️ Jalan Sehat 2024</h3>
-            <p>Rute keliling dukuh dengan doorprize menarik. Terima kasih kepada seluruh sponsor dan panitia.</p>
-          </div>
-          <div class="gallery">
-            <div class="ph">Foto 1</div>
-            <div class="ph">Foto 2</div>
-            <div class="ph">Foto 3</div>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="#">Album Foto</a>
-            <a class="btn" download href="assets/jalan-sehat-2024.zip">Unduh Foto (.zip)</a>
-          </div>
-        </article>
-
-        <!-- NUZULUL QURAN 2025 -->
-        <article class="card event">
-          <div>
-            <h3>📖 Nuzulul Quran 2025</h3>
-            <p>Peringatan Nuzulul Quran: tilawah, tausiyah, dan santunan. Semoga membawa keberkahan bagi warga.</p>
-          </div>
-          <div class="gallery">
-            <div class="ph">Foto 1</div>
-            <div class="ph">Foto 2</div>
-            <div class="ph">Foto 3</div>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="#">Album Foto</a>
-            <a class="btn" download href="assets/nuzulul-quran-2025.zip">Unduh Foto (.zip)</a>
-          </div>
-        </article>
-
-        <!-- JALAN SEHAT 2025 -->
-        <article class="card event">
-          <div>
-            <h3>🚶‍♀️ Jalan Sehat 2025</h3>
-            <p>Edisi 2025 lebih semarak: rute diperluas & hadiah spesial. Jangan lupa jaga kebersihan rute ya!</p>
-          </div>
-          <div class="gallery">
-            <div class="ph">Foto 1</div>
-            <div class="ph">Foto 2</div>
-            <div class="ph">Foto 3</div>
-          </div>
-          <div class="btn-row">
-            <a class="btn" href="#">Album Foto</a>
-            <a class="btn" download href="assets/jalan-sehat-2025.zip">Unduh Foto (.zip)</a>
-          </div>
-        </article>
-      </div>
+  <!-- Kegiatan -->
+  <section id="kegiatan" class="reveal">
+    <h2>Kegiatan</h2>
+    <div class="gallery">
+      <a href="kegiatan/jalan-sehat.html" class="card">
+        <img src="img/logo.png" alt="Logo TRK">
+        <h3>Jalan Sehat</h3>
+        <p>Acara jalan sehat dan senam bersama warga untuk kebugaran dan kebersamaan.</p>
+      </a>
+      <a href="kegiatan/lomba-17.html" class="card">
+        <img src="img/logo.png" alt="Logo TRK">
+        <h3>Lomba 17 Agustus</h3>
+        <p>Berbagai lomba seru untuk memeriahkan Hari Kemerdekaan Republik Indonesia.</p>
+      </a>
+      <a href="kegiatan/bakti-sosial.html" class="card">
+        <img src="img/logo.png" alt="Logo TRK">
+        <h3>Bakti Sosial</h3>
+        <p>Kegiatan sosial berbagi kebahagiaan dan membantu warga sekitar.</p>
+      </a>
     </div>
   </section>
 
-  <section id="kontak">
-    <div class="container">
-      <div class="sec-title">
-        <h2>Kontak</h2>
-        <span class="pill">Terbuka untuk kolaborasi & sponsor</span>
-      </div>
-      <div class="contact-grid">
-        <div class="card">
-          <p><b>Email:</b> <a href="mailto:tunasremaja.kriyan@gmail.com">tunasremaja.kriyan@gmail.com</a></p>
-          <p><b>Instagram:</b> <a href="https://instagram.com/tunasremaja.kriyan" target="_blank" rel="noopener">@tunasremaja.kriyan</a></p>
-          <p><b>Alamat:</b> DK Kriyan, Babadan, Karangdowo, Klaten</p>
-          <p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=DK+Kriyan+Babadan+Karangdowo+Klaten">Lihat di Google Maps ↗</a></p>
-        </div>
-        <div class="card">
-          <form action="mailto:tunasremaja.kriyan@gmail.com" method="post" enctype="text/plain">
-            <div class="field">
-              <label>Nama</label>
-              <input required name="nama" placeholder="Nama Anda" />
-            </div>
-            <div class="field">
-              <label>Pesan</label>
-              <textarea required name="pesan" rows="4" placeholder="Tulis pesan atau ajakan kerjasama"></textarea>
-            </div>
-            <div style="margin-top:10px">
-              <button class="btn primary" type="submit">Kirim via Email</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+  <!-- Kontak -->
+  <section id="kontak" class="reveal">
+    <h2>Kontak</h2>
+    <p>Hubungi kami melalui:</p>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:tunasremajakriyan@gmail.com">tunasremajakriyan@gmail.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/tunasremaja.kriyan" target="_blank">@tunasremajakriyan</a></li>
+      <li>Alamat: Dk. Kriyan, Babadan, Karangdowo, Klaten</li>
+    </ul>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <span>© <span id="y"></span> Tunas Remaja — DK Kriyan, Babadan, Karangdowo, Klaten</span>
-      <span class="pill">Dibuat untuk GitHub Pages</span>
+    <p>&copy; 2025 Tunas Remaja Kriyan | a creative by wasisyoga</p>
+    <div class="socials">
+      <a href="https://instagram.com/tunasremaja.kriyan" target="_blank">📷</a>
+      <a href="mailto:tunasremajakriyan@gmail.com">✉️</a>
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <!-- Script -->
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        if (revealTop < windowHeight - 100) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
+
