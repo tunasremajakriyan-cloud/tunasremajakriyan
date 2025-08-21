@@ -7,279 +7,74 @@ body, h1, h2, h3, p, ul {
 
 body {
   line-height: 1.6;
-  background: #f0fdf4;
+  background: #f9fafb;
   color: #333;
 }
 
-/* Header */
-/* Header dengan logo */
+/* Header Premium */
 .main-header {
-  background: linear-gradient(135deg, #06b6d4, #10b981);
+  background: linear-gradient(135deg, #0ea5e9, #10b981);
   color: white;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem 3rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main-header::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(0); }
 }
 
 .logo-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .logo {
-  max-width: 80px;
+  max-width: 90px;
   border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 .ig-link {
-  display: inline-block;
   margin-top: 0.5rem;
   color: #f0fdf4;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .ig-link:hover {
+  color: #d1fae5;
   text-decoration: underline;
 }
 
-/* Card link */
-.card {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Navigasi */
+/* Navigasi Premium */
 nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #065f46;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(12px);
+  background: rgba(6,95,70,0.85);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav li {
-  margin: 0.5rem;
-}
-
-nav a {
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: #10b981;
-  color: #fff;
-}
-
-/* Section */
-section {
-  padding: 3rem 1.5rem;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 1.5rem;
-  color: #065f46;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.card img {
-  max-width: 100px;
-  margin-bottom: 1rem;
-}
-
-/* Kontak */
-.contact-list {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-list li {
-  margin: 0.5rem 0;
-}
-
-.contact-list a {
-  color: #06b6d4;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background: #065f46;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-/* Halaman detail kegiatan */
-.detail-header {
-  background: linear-gradient(135deg, #06b6d4, #10b981);
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.detail-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-.detail-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem 1.5rem;
-  text-align: center;
-}
-
-.detail-section h2 {
-  color: #065f46;
-  margin-bottom: 1rem;
-}
-
-.detail-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.detail-gallery img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.detail-gallery img:hover {
-  transform: scale(1.05);
-}
-.back-link {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
-  background: #10b981;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.back-link:hover {
-  background: #059669;
-}
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  /* Header */
-  .logo-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo {
-    max-width: 100px;
-    margin-bottom: 1rem;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  .ig-link {
-    display: block;
-    margin-top: 0.3rem;
-    font-size: 0.95rem;
-  }
-
-  /* Section */
-  section {
-    padding: 2rem 1rem;
-  }
-
-  section p {
-    max-width: 90%;
-    margin: auto;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  /* Gallery */
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 1rem;
-    border-radius: 12px;
-  }
-
-  .card img {
-    max-width: 80px;
-  }
-}
-
-/* Extra small (HP kecil) */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  header p {
-    font-size: 0.9rem;
-  }
-  nav ul {
-    flex-direction: column;
-  }
-  nav li {
-    margin: 0.3rem 0;
-  }
-}
-/* Navigasi Container */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -295,7 +90,6 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Hamburger button */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -305,7 +99,6 @@ footer {
   cursor: pointer;
 }
 
-/* Menu default */
 nav ul {
   list-style: none;
   display: flex;
@@ -321,7 +114,7 @@ nav a {
   color: white;
   font-weight: 500;
   text-decoration: none;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 25px;
   transition: all 0.3s ease;
 }
@@ -330,12 +123,113 @@ nav a:hover {
   background: #10b981;
 }
 
-/* ===== Responsive Menu ===== */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+/* Section */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
 
+h2 {
+  margin-bottom: 1.5rem;
+  color: #065f46;
+  font-size: 1.9rem;
+  font-weight: 700;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 0.5rem auto 0;
+  background: #10b981;
+  border-radius: 2px;
+}
+
+/* Gallery Premium */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+  max-width: 90px;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Kontak */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+}
+
+.contact-list a {
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+  color: #0284c7;
+}
+
+/* Footer Premium */
+footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+footer .socials a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #10b981;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #34d399;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
   nav ul {
     display: none;
     flex-direction: column;
@@ -345,21 +239,9 @@ nav a:hover {
     border-radius: 8px;
     padding: 0.5rem 0;
   }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav li {
-    margin: 0.3rem 0;
-  }
-
-  nav a {
-    display: block;
-    text-align: center;
-    padding: 0.8rem;
-  }
+  nav ul.active { display: flex; }
+  nav li { margin: 0.3rem 0; }
+  nav a { text-align: center; padding: 0.8rem; }
+  section { padding: 2rem 1rem; }
+  .gallery { grid-template-columns: 1fr; }
 }
-
-
-
