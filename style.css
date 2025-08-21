@@ -245,3 +245,15 @@ footer .socials a:hover {
   section { padding: 2rem 1rem; }
   .gallery { grid-template-columns: 1fr; }
 }
+/* Scroll Reveal Effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
