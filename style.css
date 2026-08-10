@@ -404,3 +404,22 @@ footer .socials a:hover {
 
 
 
+
+
+/* Tombol Download Galeri */
+.download-btn {
+  display: inline-block;
+  margin: 0 1rem 1.5rem;
+  padding: 0.7rem 1.2rem;
+  background: #10b981;
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
