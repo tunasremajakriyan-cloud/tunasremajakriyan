@@ -1576,3 +1576,35 @@ button {
     justify-content: center;
   }
 }
+
+
+/* Four activity cards */
+.activity-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.activity-grid .activity-card {
+  min-height: 390px;
+}
+
+.website-credit {
+  color: rgba(255,255,255,0.38);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.website-credit strong {
+  color: rgba(255,255,255,0.72);
+}
+
+@media (max-width: 700px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-grid .activity-card {
+    min-height: 360px;
+  }
+}
