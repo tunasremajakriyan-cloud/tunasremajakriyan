@@ -3,128 +3,433 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tunas Remaja Kriyan</title>
+  <meta name="description" content="Website resmi Tunas Remaja Kriyan - Bersatu, Berkarya, Membangun Desa.">
+  <title>Tunas Remaja Kriyan | Bersatu, Berkarya, Membangun Desa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="main-header">
-    <div class="logo-container">
-      <img src="img/logo.png" alt="Logo TRK" class="logo">
-      <div class="text-header">
-        <h1>Tunas Remaja Kriyan</h1>
-        <p>Bersatu, Berkarya, Membangun Desa</p>
-        <a href="https://instagram.com/tunasremajakriyan" target="_blank" class="ig-link">
-          @tunasremaja.kriyan
-        </a>
+  <!-- Background decoration -->
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <!-- NAVBAR -->
+  <header class="site-header" id="top">
+    <nav class="navbar container">
+      <a href="#beranda" class="brand">
+        <img src="img/logo.png" alt="Logo Tunas Remaja Kriyan">
+        <span>
+          <strong>TRK</strong>
+          <small>Tunas Remaja Kriyan</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kegiatan">Kegiatan</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak" class="nav-cta">Kontak</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <!-- Navigasi -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo-nav">🌿 TRK</div>
-      <button class="hamburger" id="hamburger">☰</button>
-      <ul id="nav-menu">
-        <li><a href="#hero">Beranda</a></li>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#kegiatan">Kegiatan</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="beranda">
+      <div class="hero-pattern"></div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero reveal">
-    <div class="hero-content">
-      <h1>Selamat Datang di <span>Tunas Remaja Kriyan</span></h1>
-      <p>Bersatu, Berkarya, dan Membangun Desa dengan Semangat Pemuda</p>
-      <div class="hero-buttons">
-        <a href="#kegiatan" class="btn-primary">Lihat Kegiatan</a>
-        <a href="#kontak" class="btn-secondary">Gabung Sekarang</a>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            Pemuda Dukuh Kriyan
+          </div>
+
+          <h1>
+            Bersatu.
+            <span>Berkarya.</span>
+            Membangun Desa.
+          </h1>
+
+          <p>
+            Wadah kreativitas dan kebersamaan pemuda Dukuh Kriyan
+            untuk menciptakan kegiatan positif, mempererat persaudaraan,
+            dan ikut membangun lingkungan yang lebih baik.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#kegiatan" class="btn btn-primary">
+              Lihat Kegiatan <span>↗</span>
+            </a>
+            <a href="#tentang" class="btn btn-ghost">
+              Kenal Kami
+            </a>
+          </div>
+
+          <div class="hero-mini-stats">
+            <div>
+              <strong>01</strong>
+              <span>Komunitas</span>
+            </div>
+            <div>
+              <strong>∞</strong>
+              <span>Semangat</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Kebersamaan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <span>EST.</span>
+              <strong>KRiyan</strong>
+            </div>
+            <img src="img/logo.png" alt="Logo Tunas Remaja Kriyan" class="hero-logo">
+            <div class="hero-card-bottom">
+              <span>PEMUDA</span>
+              <span>•</span>
+              <span>BERGERAK</span>
+              <span>•</span>
+              <span>BERSAMA</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-one">🌱 Generasi Aktif</div>
+          <div class="floating-badge badge-two">🤝 Guyub Rukun</div>
+        </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="img/logo.png" alt="Logo TRK">
-    </div>
-  </section>
 
-  <!-- Profil -->
-  <section id="profil" class="reveal">
-    <h2>Profil</h2>
-    <p>
-      Tunas Remaja Kriyan adalah wadah berkumpulnya generasi muda Desa Kriyan
-      untuk meningkatkan persaudaraan, kreativitas, dan kepedulian sosial demi kemajuan masyarakat.
-      Kami hadir sebagai sarana bagi pemuda untuk menyalurkan bakat, ide, serta semangat dalam
-      membangun lingkungan yang lebih baik.
-    </p>
-  </section>
-
-  <!-- Kegiatan -->
-  <section id="kegiatan" class="reveal">
-    <h2>Kegiatan</h2>
-    <div class="gallery">
-      <a href="kegiatan/jalan-sehat.html" class="card">
-        <img src="img/logo.png" alt="Logo TRK">
-        <h3>Jalan Sehat</h3>
-        <p>Acara jalan sehat dan senam bersama warga untuk kebugaran dan kebersamaan.</p>
+      <a href="#tentang" class="scroll-hint" aria-label="Scroll ke bawah">
+        <span></span>
+        Scroll untuk melihat
       </a>
-      <a href="kegiatan/lomba-17.html" class="card">
-        <img src="img/logo.png" alt="Logo TRK">
-        <h3>Lomba 17 Agustus</h3>
-        <p>Berbagai lomba seru untuk memeriahkan Hari Kemerdekaan Republik Indonesia.</p>
-      </a>
-      <a href="kegiatan/bakti-sosial.html" class="card">
-        <img src="img/logo.png" alt="Logo TRK">
-        <h3>Bakti Sosial</h3>
-        <p>Kegiatan sosial berbagi kebahagiaan dan membantu warga sekitar.</p>
-      </a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Kontak -->
-  <section id="kontak" class="reveal">
-    <h2>Kontak</h2>
-    <p>Hubungi kami melalui:</p>
-    <ul class="contact-list">
-      <li>Email: <a href="mailto:tunasremajakriyan@gmail.com">tunasremajakriyan@gmail.com</a></li>
-      <li>Instagram: <a href="https://instagram.com/tunasremaja.kriyan" target="_blank">@tunasremajakriyan</a></li>
-      <li>Alamat: Dk. Kriyan, Babadan, Karangdowo, Klaten</li>
-    </ul>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Tunas Remaja Kriyan | a creative by wasisyoga</p>
-    <div class="socials">
-      <a href="https://instagram.com/tunasremaja.kriyan" target="_blank">📷</a>
-      <a href="mailto:tunasremajakriyan@gmail.com">✉️</a>
+    <!-- QUICK STATS -->
+    <section class="quick-stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong>01</strong><span>Komunitas Pemuda</span></div>
+        <div class="stat reveal"><strong>03+</strong><span>Jenis Kegiatan</span></div>
+        <div class="stat reveal"><strong>∞</strong><span>Ide & Kreativitas</span></div>
+        <div class="stat reveal"><strong>1</strong><span>Tujuan Bersama</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="tentang">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-label">01 — Tentang Kami</span>
+            <h2>Tempat anak muda<br><span>tumbuh bersama.</span></h2>
+          </div>
+          <p>
+            Tunas Remaja Kriyan hadir sebagai ruang untuk berkumpul,
+            bertukar ide, berkegiatan, dan memberi dampak positif
+            bagi Dukuh Kriyan.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="img/merah-putih.png" alt="Semangat kebersamaan Tunas Remaja Kriyan">
+            <div class="image-caption">
+              <span>01</span>
+              <strong>Semangat muda,<br>aksi nyata.</strong>
+            </div>
+          </div>
+
+          <div class="about-copy reveal">
+            <p class="lead">
+              Kami percaya perubahan besar dimulai dari langkah kecil
+              yang dilakukan bersama.
+            </p>
+
+            <div class="values">
+              <article>
+                <span class="value-number">01</span>
+                <div>
+                  <h3>Kebersamaan</h3>
+                  <p>Menjaga persaudaraan dan guyub rukun antar pemuda.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="value-number">02</span>
+                <div>
+                  <h3>Kreativitas</h3>
+                  <p>Mendorong ide dan kegiatan positif yang bermanfaat.</p>
+                </div>
+              </article>
+
+              <article>
+                <span class="value-number">03</span>
+                <div>
+                  <h3>Kepedulian</h3>
+                  <p>Ikut hadir dan bergerak untuk lingkungan sekitar.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="section activities-section" id="kegiatan">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-label">02 — Kegiatan</span>
+            <h2>Bergerak, seru,<br><span>dan bermanfaat.</span></h2>
+          </div>
+          <p>
+            Dari olahraga sampai kegiatan sosial, setiap agenda menjadi
+            kesempatan untuk berkumpul dan membuat cerita baru.
+          </p>
+        </div>
+
+        <div class="activity-grid">
+          <article class="activity-card featured reveal">
+            <div class="activity-number">01</div>
+            <div class="activity-icon">🏃</div>
+            <span class="activity-tag">Olahraga & Kebersamaan</span>
+            <h3>Semarak Jalan Sehat</h3>
+            <p>
+              Jalan sehat dan senam bersama warga untuk menjaga kebugaran
+              sekaligus mempererat silaturahmi.
+            </p>
+            <a
+              href="https://drive.google.com/drive/folders/1wt_Be_uJOzrOgx8J5vJIv8hr8DBuBLpO?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-link"
+            >
+              Lihat & Download Galeri <span>↗</span>
+            </a>
+          </article>
+
+          <article class="activity-card reveal">
+            <div class="activity-number">02</div>
+            <div class="activity-icon">🇮🇩</div>
+            <span class="activity-tag">Kemerdekaan</span>
+            <h3>Lomba 17 Agustus</h3>
+            <p>
+              Memeriahkan Hari Kemerdekaan dengan lomba seru dan kegiatan
+              yang melibatkan warga.
+            </p>
+            <a href="#" class="card-link muted-link">Segera hadir <span>→</span></a>
+          </article>
+
+          <article class="activity-card reveal">
+            <div class="activity-number">03</div>
+            <div class="activity-icon">❤️</div>
+            <span class="activity-tag">Sosial</span>
+            <h3>Bakti Sosial</h3>
+            <p>
+              Berbagi kebahagiaan dan membantu sesama melalui kegiatan
+              sosial di lingkungan sekitar.
+            </p>
+            <a href="#" class="card-link muted-link">Segera hadir <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TIMELINE -->
+    <section class="section timeline-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-label">03 — Perjalanan</span>
+            <h2>Dari ide kecil<br><span>menjadi aksi.</span></h2>
+          </div>
+          <p>
+            Setiap kegiatan berawal dari kebersamaan, direncanakan bersama,
+            lalu diwujudkan menjadi pengalaman yang berkesan.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot">01</span>
+            <div>
+              <small>IDE</small>
+              <h3>Kumpul & Bertukar Gagasan</h3>
+              <p>Menampung ide kreatif pemuda untuk kegiatan yang positif dan bermanfaat.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-dot">02</span>
+            <div>
+              <small>GERAK</small>
+              <h3>Siapkan & Jalankan</h3>
+              <p>Membagi peran, mengajak warga, dan bergerak bersama sampai kegiatan terlaksana.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-dot">03</span>
+            <div>
+              <small>KENANGAN</small>
+              <h3>Dokumentasikan & Bagikan</h3>
+              <p>Menyimpan cerita kegiatan agar bisa dikenang dan menjadi inspirasi berikutnya.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PHOTO PREVIEW -->
+    <section class="section photo-preview">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-label">04 — Momen</span>
+            <h2>Potret kecil dari<br><span>cerita besar.</span></h2>
+          </div>
+          <p>
+            Beberapa momen pilihan untuk menghidupkan suasana. Dokumentasi
+            lengkap tersedia di galeri Google Drive.
+          </p>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card photo-main reveal">
+            <img src="img/merah-putih.png" alt="Semangat kebersamaan Dukuh Kriyan">
+            <figcaption><span>Semangat</span><strong>Bersama warga</strong></figcaption>
+          </figure>
+          <figure class="photo-card photo-logo reveal">
+            <div class="photo-placeholder">
+              <img src="img/logo.png" alt="Logo Tunas Remaja Kriyan">
+            </div>
+            <figcaption><span>Identitas</span><strong>Tunas Remaja Kriyan</strong></figcaption>
+          </figure>
+          <div class="photo-card photo-message reveal">
+            <span>“</span>
+            <p>Bukan sekadar berkegiatan. Kami ingin tumbuh, bergerak, dan memberi arti bersama.</p>
+            <small>— Tunas Remaja Kriyan</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY CTA -->
+    <section class="gallery-section section" id="galeri">
+      <div class="container">
+        <div class="gallery-banner reveal">
+          <div class="gallery-copy">
+            <span class="section-label light">05 — Galeri</span>
+            <h2>Setiap kegiatan<br>punya ceritanya.</h2>
+            <p>
+              Simpan dan lihat kembali dokumentasi Semarak Jalan Sehat
+              Dukuh Kriyan di galeri Google Drive.
+            </p>
+            <a
+              class="btn btn-white"
+              href="https://drive.google.com/drive/folders/1wt_Be_uJOzrOgx8J5vJIv8hr8DBuBLpO?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📥 Buka Galeri Foto <span>↗</span>
+            </a>
+          </div>
+
+          <div class="gallery-art" aria-hidden="true">
+            <div class="gallery-circle circle-a"></div>
+            <div class="gallery-circle circle-b"></div>
+            <div class="gallery-frame frame-a">📸</div>
+            <div class="gallery-frame frame-b">🏃</div>
+            <div class="gallery-frame frame-c">🤝</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="kontak">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="section-label">06 — Hubungi Kami</span>
+          <h2>Yuk, ikut jadi bagian<br><span>dari gerakan ini.</span></h2>
+          <p>
+            Punya ide kegiatan, ingin berkolaborasi, atau sekadar ingin
+            mengenal lebih dekat? Hubungi Tunas Remaja Kriyan.
+          </p>
+        </div>
+
+        <div class="contact-card reveal">
+          <a href="mailto:tunasremajakriyan@gmail.com" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span>
+              <small>Email</small>
+              <strong>tunasremajakriyan@gmail.com</strong>
+            </span>
+            <b>↗</b>
+          </a>
+
+          <a href="https://instagram.com/tunasremaja.kriyan" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon">◎</span>
+            <span>
+              <small>Instagram</small>
+              <strong>@tunasremaja.kriyan</strong>
+            </span>
+            <b>↗</b>
+          </a>
+
+          <div class="contact-item">
+            <span class="contact-icon">⌖</span>
+            <span>
+              <small>Lokasi</small>
+              <strong>Dk. Kriyan, Babadan, Karangdowo, Klaten</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#top" class="brand footer-brand">
+        <img src="img/logo.png" alt="Logo TRK">
+        <span>
+          <strong>Tunas Remaja Kriyan</strong>
+          <small>Bersatu, Berkarya, Membangun Desa</small>
+        </span>
+      </a>
+
+      <p>© <span id="year"></span> Tunas Remaja Kriyan. Dibuat dengan semangat pemuda.</p>
+
+      <div class="footer-actions">
+        <a
+          href="https://drive.google.com/drive/folders/1wt_Be_uJOzrOgx8J5vJIv8hr8DBuBLpO?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-gallery"
+        >📸 Galeri</a>
+        <a href="#top" class="back-top" aria-label="Kembali ke atas">↑</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Script -->
-  <script>
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Scroll reveal
-    const reveals = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        if (revealTop < windowHeight - 100) {
-          reveals[i].classList.add("active");
-        }
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
